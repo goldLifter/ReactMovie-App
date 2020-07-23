@@ -1,0 +1,22 @@
+.movie-start-page{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    list-style: none;
+    overflow-x: auto;
+    padding: 20px;
+    
+}
+
+.movie-start-page::-webkit-scrollbar {
+    width: 0;
+  }
+
+.img-start-page{
+    width: 200px;
+    height: 300px;
+}
+
+.card-page-start{
+    margin-left: 20px;
+}

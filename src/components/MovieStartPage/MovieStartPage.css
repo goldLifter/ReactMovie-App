@@ -1,10 +1,28 @@
+.wrap{
+    margin-top: 70px;
+}
+
+.movie-title{
+    background:rgb(18, 125, 187);
+    color: white;
+    max-width: 360px;
+    text-align: center;
+    font-weight: normal;
+    padding: 5px;
+    border-radius: 15px;
+}
+
 .movie-start-page{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     list-style: none;
     overflow-x: auto;
-    padding: 20px;
+    overflow-y: hidden;
+    padding: 20px 0 0 20px;
+    background: rgb(0,0,0);
+    background: linear-gradient(226deg, rgba(0,0,0,1) 0%, rgba(45,166,253,1) 100%);
+    border-radius: 25px;
     
 }
 
@@ -14,9 +32,31 @@
 
 .img-start-page{
     width: 200px;
-    height: 300px;
 }
 
 .card-page-start{
-    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 560px) {
+    .movie-title{
+        font-size: 13px;
+        width: 280px;
+        margin: 20px auto 10px;
+    }
+
+    .img-start-page{
+        width: 100px;
+        height: 150px;
+    }
+
+    .card-page-start{
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    .card-body{
+        display: none;
+    }
 }

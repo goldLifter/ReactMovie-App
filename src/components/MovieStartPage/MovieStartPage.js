@@ -11,26 +11,25 @@ class MovieStartPage extends React.Component{
     }
 
     componentDidMount() {
-        let arr = new ApiService();
-        arr.getAllMovies().then((movie) => {
+        const api = new ApiService();
+        api.getPage().then((movie) => {
             this.setState({
-                movie: movie.results,
+                movie: movie,
                 loading: false
             })
         });
     }
 
     render() {
-        console.log(this.state.movie)
         return(
-            <div>
-                <h3>Список фильмов</h3>
+            <div className='wrap'>
+                <h3 className="movie-title">{this.props.title}</h3>
                 <div className="movie-start-page">
                     {
                         this.state.movie.map(res => {
                             return(
-                                <div key={res.id} >
-                                    <Link to={`/movies/${res.id}`}>
+                                <div className="tocard" key={res.id} >
+                                    <Link to={`/top/${res.id}`}>
                                         <div className="card card-page-start" >
                                             <div className="card-rating">{res.vote_average*10}%</div>
                                             <img src={`https://image.tmdb.org/t/p/w500${res.poster_path}`} className="img-start-page" alt="..." />

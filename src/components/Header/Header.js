@@ -18,14 +18,8 @@ const Header = () => {
                         <Link className="nav-link" to="/">Home </Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/movies/page/1">Movies</Link>
+                        <Link className="nav-link" to="/top">Movies</Link>
                     </li>
-                    {/* <li className="nav-item">
-                        <Link className="nav-link" to="/serials">Serials</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/tvshow">TV Show</Link>
-                    </li> */}
                     </ul>
                 </div>
             </nav>
